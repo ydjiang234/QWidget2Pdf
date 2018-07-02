@@ -1,4 +1,7 @@
 #include "QWidget2Pdf.h"
+#include <QPageLayout>
+#include <QPageSize>
+#include <QMarginsF>
 
 QWidget2Pdf::QWidget2Pdf() {}
 
@@ -8,7 +11,13 @@ bool QWidget2Pdf::save(QWidget *w, QString path, int pageWidth)
 {
 
     QPdfWriter *writer = new QPdfWriter(path);
-    writer->setPageSize(QPageSize::Custom(w->size()));
+    //double ratio = (double) w->height()/w->width();
+    writer->setPageSizeMM(QSize(w->widthMM(), w->heightMM()));
+
+    writer->setPageMargins(QMargins(0,0,0,0));
+    //Important here
+    writer->setResolution(w->width()*25.4/w->widthMM());
+    //Important
     QPainter *painter = new QPainter(writer);
     w->render(painter);
     painter->end();
