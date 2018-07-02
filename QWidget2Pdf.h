@@ -2,9 +2,6 @@
 #define QWIDGET2PDF_H
 
 #include <QWidget>
-#include <QPdfWriter>
-#include <QPainter>
-#include <iostream>
 
 class QWidget2Pdf
 {

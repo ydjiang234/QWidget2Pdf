@@ -2,6 +2,10 @@
 #include <QPageLayout>
 #include <QPageSize>
 #include <QMarginsF>
+#include <QPainter>
+#include <QPdfWriter>
+#include <QString>
+
 
 QWidget2Pdf::QWidget2Pdf() {}
 
