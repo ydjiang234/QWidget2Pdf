@@ -7,7 +7,7 @@ QWidget2Pdf::QWidget2Pdf() {}
 
 QWidget2Pdf::~QWidget2Pdf() {}
 
-bool QWidget2Pdf::save(QWidget *w, QString path, int pageWidth)
+bool QWidget2Pdf::save(QWidget *w, QString path)
 {
 
     QPdfWriter *writer = new QPdfWriter(path);

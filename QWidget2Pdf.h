@@ -11,7 +11,7 @@ class QWidget2Pdf
 public:
     QWidget2Pdf();
     ~QWidget2Pdf();
-    bool save(QWidget *w, QString path, int pageWidth=210);//page width should be in mm
+    bool save(QWidget *w, QString path);//page width should be in mm
 };
 
 #endif // QWIDGET2PDF_H
